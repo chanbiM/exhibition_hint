@@ -5,4 +5,31 @@ setInterval(function(){
  $('.slide:first').appendTo('.slideWrap') //첫번째 이미지를 마지막에 추가하여 반복적으로 이미지를 재생하도록 함
 },3000)
 
+//탭메뉴
+$("#info-tab").click(function(){
+    $(".contents > div").removeClass("active")
+    $("#info-tab").addClass("active")
+
+    $(".exhibition-intro").hide();
+    $(".review").hide();
+    $(".info").show();
+})
+
+$("#exhi-tab").click(function(){
+    $(".contents > div").removeClass("active")
+    $("#exhi-tab").addClass("active")
+
+    $(".exhibition-intro").show();
+    $(".review").hide();
+    $(".info").hide();
+})
+
+$("#review-tab").click(function(){
+    $(".contents > div").removeClass("active")
+    $("#exhi-tab").addClass("active")
+
+    $(".review").show();
+    $(".exhibition-intro").hide();
+    $(".info").hide();
+})
 

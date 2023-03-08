@@ -126,7 +126,8 @@ header .material-icons{
     color: white;
     width: 100%;
     line-height: 2;
-    transform: translate(0,20%);
+    transform: translate(0,40%);
+    height: 400px;
 }
 .title {
     font-size: 50px;
@@ -182,8 +183,51 @@ header .material-icons{
 }
 
 .info, .exhibition-intro, .review {
-    width: 100%;
-    padding: 50px;
+    width: 80%;
+    padding: 30px;
+}
+
+.exhibition-intro {
+    display: none;
+}
+.review {
+    display: none;
+}
+
+.info, .exhibition-intro, .review > p {
+    line-height: 2;
+}
+.review > div {
+    border: 1px rgb(167, 167, 167) solid;
+    padding: 15px;
+    width: 90%;
+    margin: 0 auto;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 2px 2px rgb(0, 0, 0, 0.2);
+
+}
+.review h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.info-brief > ul {
+    display: flex;
+}
+.info-brief > ul > li {
+    margin-right: 10px;
+}
+.info-title {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #faf3aa;
+    padding: 20px;
+    text-align: center;
+    color: #896b2a;
+    font-size: 13px;
 }
 /*반응형*/
 @media screen and (max-width: 1500px){
@@ -277,7 +321,7 @@ header .material-icons{
         font-size: 11px;
     }
     .slideText{
-        transform: translate(0%, 40%);
+        transform: translate(0%, 60%);
         line-height: 1.5;
     }
     .slide img {
