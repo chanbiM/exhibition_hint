@@ -1,0 +1,229 @@
+body {
+    color: #344e41;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.4;
+}
+
+/*블럭 색깔 바꾸기*/
+::selection {background:#f2e76c; color: #2c1508;}
+::-moz-selection{background:#f2e76c; color: #2c1508;}
+
+img {
+    display: block;
+}
+
+/* header */
+header {
+    z-index: 991;
+    position: relative;
+    height: 200px;
+    background-color: rgba(255,255,255, .1);
+    backdrop-filter: blur(10px);
+    color: #dad7cd;
+}
+header:hover{
+    color: #dad7cd;
+    background-color: #170e05;
+    transition: .5s;
+}
+header .inner {
+    width: 100%;
+    height: 120px;
+    margin: 0 auto;
+}
+header .logo img {
+    width: 250px;
+    height: 110px;
+}
+header .logo {
+    position: absolute;
+    height: 110px;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    margin: auto;
+    margin-left: 10px;
+}
+header .main-menu {
+    position: absolute;
+    height: 110px;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    width: 40%;
+    height: 120px;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+}
+header .main-menu>li {
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+header .main-menu>li>a{
+    cursor: pointer;
+    font-weight: 400; 
+    display: block;   
+    width: 100%;
+    height: 100%;
+    line-height: 120px;
+    font-size: 30px;
+} 
+
+header .main-menu li>a:hover{
+    font-weight: bold;
+    transition: .1s;
+} 
+header .material-icons{
+    font-size: 40px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    height: 120px;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+/*main section*/
+.main-section .inner{
+    position: absolute;
+    top: 0;
+    width: 100%; 
+    height: 600px;
+}
+.slideWrap{
+    width: 100%; 
+    position:relative;
+    
+}
+.slide{
+    position:absolute;
+    width: 100%;
+}
+.slide img {
+    width: 100%; 
+    height: 1200px;
+}
+.slideText {
+    line-height: 2;
+    position: absolute;
+    z-index: 900;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+    transform: translate(0%, 80%);
+}
+.title {
+    font-size: 100px;
+}
+.content {
+    font-size: 50px;
+}
+/*깜빡이는 효과*/
+.blink {
+    font-size: 60px;
+    animation: blink 0.8s infinite;
+}
+@keyframes blink {
+    to {
+      opacity: 0;
+    }
+  }
+
+@media screen and (max-width: 1500px){
+    header .main-menu {
+        width: 50%;
+        transition: .5s;
+    }
+    .slide img {
+        height: 800px; 
+        transition: .5s;
+    }
+    .slideText{
+        transform: translate(0%, 50%);
+    }
+}
+@media screen and (max-width: 1000px){
+    header .main-menu {
+        display: none;
+    }
+    header .material-icons{ 
+        height: 100px;
+        display: flex;
+    }
+    header {
+        height: 110px;
+        transition: .5s;
+    }
+    header .logo img {
+        width: 240px;
+        height: 110px;
+        
+    }
+    header .logo {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .slide img {
+        height: 600px; 
+        transition: .5s;
+    }
+    .title, .blink {
+        font-size: 50px;
+    }
+    .content{
+        font-size: 20px;
+    }
+    .slideText{
+        transform: translate(0%, 40%);
+    }
+}
+@media screen and (max-width: 768px){
+    header .main-menu {
+        display: none;
+    }
+    header .material-icons{ 
+        height: 100px;
+        display: flex;
+    }
+    header {
+        height: 90px;
+        transition: .5s;
+    }
+    header .logo img {
+        width: 120px;
+        height: 100px;
+        margin: 5px;
+    }
+    header .logo {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .slide img {
+        height: 600px; 
+        transition: .5s;
+    }
+    .title, .blink{
+        font-size: 30px;
+    }
+    .content{
+        font-size: 11px;
+    }
+    .slideText{
+        transform: translate(0%, 40%);
+        line-height: 1.5;
+    }
+}
