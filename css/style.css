@@ -18,7 +18,7 @@ img {
 header {
     z-index: 991;
     position: relative;
-    height: 200px;
+    height: 120px;
     background-color: rgba(255,255,255, .1);
     backdrop-filter: blur(10px);
     color: #dad7cd;
@@ -34,6 +34,7 @@ header .inner {
     margin: 0 auto;
 }
 header .logo img {
+    margin-left: 30px;
     width: 250px;
     height: 110px;
 }
@@ -72,7 +73,6 @@ header .main-menu>li>a{
     width: 100%;
     height: 100%;
     line-height: 120px;
-    font-size: 30px;
 } 
 
 header .main-menu li>a:hover{
@@ -96,14 +96,15 @@ header .material-icons{
 
 /*main section*/
 .main-section .inner{
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%; 
-    height: 600px;
+    height: 480px;
 }
 .slideWrap{
     width: 100%; 
-    position:relative;
+    position:absolute;
+    top: -120px;
     
 }
 .slide{
@@ -112,23 +113,23 @@ header .material-icons{
 }
 .slide img {
     width: 100%; 
-    height: 1200px;
+    height: 650px;
 }
 .slideText {
-    line-height: 2;
     position: absolute;
     z-index: 900;
     text-align: center;
     color: white;
     width: 100%;
     height: 100%;
-    transform: translate(0%, 80%);
+    line-height: 2;
+    transform: translate(0,20%);
 }
 .title {
-    font-size: 100px;
+    font-size: 50px;
 }
 .content {
-    font-size: 50px;
+    font-size: 30px;
 }
 /*깜빡이는 효과*/
 .blink {
@@ -140,6 +141,10 @@ header .material-icons{
       opacity: 0;
     }
   }
+
+
+/* 아래 내용 스타일 */
+
 
 @media screen and (max-width: 1500px){
     header .main-menu {
@@ -187,10 +192,10 @@ header .material-icons{
         font-size: 20px;
     }
     .slideText{
-        transform: translate(0%, 40%);
+        height: 50%;
     }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 500px){
     header .main-menu {
         display: none;
     }
@@ -217,7 +222,7 @@ header .material-icons{
         transition: .5s;
     }
     .title, .blink{
-        font-size: 30px;
+        font-size: 70px;
     }
     .content{
         font-size: 11px;
@@ -226,4 +231,16 @@ header .material-icons{
         transform: translate(0%, 40%);
         line-height: 1.5;
     }
+    .slide img {
+        height: 400px; 
+        transition: .5s;
+    }
+    .title, .blink {
+        font-size: 20px;
+    }
+    .content{
+        font-size: 10px;
+    }
+    
 }
+
