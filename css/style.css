@@ -140,8 +140,12 @@ header .material-icons{
     to {
       opacity: 0;
     }
-  }
+}
 
+.contents h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
 
 /* 아래 내용 스타일 */
 
@@ -206,6 +210,9 @@ header .material-icons{
     header {
         height: 90px;
         transition: .5s;
+        color: #dad7cd;
+        background-color: #170e05;
+        backdrop-filter: blur(0px);
     }
     header .logo img {
         width: 120px;
